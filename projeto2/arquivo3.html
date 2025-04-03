@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de CSS</title>
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- CSS Interno -->
+    <style>
+        .interno {
+            color: blue;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: red; text-align: center;">CSS Inline</h1> <!-- CSS Inline -->
+
+    <p class="interno">Este parágrafo usa CSS Interno.</p> <!-- CSS Interno -->
+
+    <div class="externo">
+        Este bloco usa CSS Externo.
+    </div>
+
+</body>
+</html>

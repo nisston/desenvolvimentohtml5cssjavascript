@@ -1,0 +1,31 @@
+/* 1. Nome da tag: aplica a todos os <p> */
+p {
+    color: blue;
+    font-size: 18px;
+}
+
+/* 2. Classe (reutilizável) */
+.destaque {
+    background-color: yellow;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* 3. ID (aplicado apenas ao elemento com id="titulo-principal") */
+#titulo-principal {
+    font-size: 24px;
+    color: red;
+    text-align: center;
+}
+
+/* 4. Múltiplas classes (um elemento pode ter mais de uma classe) */
+.borda {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+/* 5. Múltiplas tags no mesmo seletor */
+span, strong {
+    color: green;
+    font-weight: bold;
+}

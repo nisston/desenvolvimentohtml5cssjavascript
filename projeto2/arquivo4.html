@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Seletores no CSS</title>
+    
+    <!-- Importação do CSS externo -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <!-- Nome da tag (afeta todos os <p>) -->
+    <p>Este parágrafo será estilizado usando o nome da tag.</p>
+
+    <!-- Classe (reutilizável) -->
+    <div class="destaque">
+        Este é um bloco estilizado com uma classe.
+    </div>
+
+    <div class="destaque">
+        Este é um segundo bloco estilizado pela mesma classe.
+    </div>
+
+    <!-- ID (único, usado apenas uma vez na página) -->
+    <h1 id="titulo-principal">Título Principal com ID</h1>
+
+    <!-- Múltiplas classes -->
+    <p class="destaque borda">Este parágrafo usa múltiplas classes.</p>
+
+    <!-- Aplicando estilo a múltiplas tags -->
+    <span>Este <span>texto</span> e a <strong>palavra em negrito</strong> compartilham o mesmo estilo.</span>
+
+</body>
+</html>
+
+<!-- 
+Seletor				Como é usado		Aplica-se a											Exemplo no HTML
+Nome da tag			tag {}				Todas as tags do mesmo tipo							p { color: blue; }
+Classe (.)			.classe {}			Elementos com essa classe (pode ser reutilizada)	<div class="destaque">
+ID (#)				#id {}				Um único elemento específico						<h1 id="titulo-principal">
+Múltiplas classes	.classe1.classe2 {}	Elementos que possuem ambas as classes				<p class="destaque borda">
+Múltiplas tags		tag1, tag2 {}		Aplica o mesmo estilo a várias tags					span, strong { color: green; }
+-->
