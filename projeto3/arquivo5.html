@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário com Campos Lado a Lado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 600px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    h2 {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .mensagem {
+      grid-column: 1 / -1;
+    }
+
+    .botoes {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .botoes input {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .botoes .enviar {
+      background-color: #28a745;
+    }
+
+    .botoes .limpar {
+      background-color: #dc3545;
+    }
+
+    .botoes .enviar:hover {
+      background-color: #218838;
+    }
+
+    .botoes .limpar:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Cadastro com Layout Personalizado</h2>
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade">
+    </div>
+
+    <div class="form-group">
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero">
+        <option value="">Selecione</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+      </select>
+    </div>
+
+    <div class="form-group mensagem">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+    </div>
+
+    <div class="botoes">
+      <input type="submit" class="enviar" value="Enviar">
+      <input type="reset" class="limpar" value="Limpar">
+    </div>
+  </form>
+</body>
+</html>

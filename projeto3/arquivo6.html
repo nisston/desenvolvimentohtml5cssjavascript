@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos de Layouts</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 50px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .box {
+      background-color: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    /* === Flexbox Layout === */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    /* === Grid Layout === */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* === Layout Responsivo === */
+    .responsive-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Layout com Flexbox</h2>
+    <div class="flex-container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Layout com CSS Grid</h2>
+    <div class="grid-container">
+      <div class="box">Box A</div>
+      <div class="box">Box B</div>
+      <div class="box">Box C</div>
+      <div class="box">Box D</div>
+      <div class="box">Box E</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Layout Responsivo com Grid</h2>
+    <div class="responsive-container">
+      <div class="box">Responsivo 1</div>
+      <div class="box">Responsivo 2</div>
+      <div class="box">Responsivo 3</div>
+      <div class="box">Responsivo 4</div>
+    </div>
+  </section>
+
+</body>
+</html>

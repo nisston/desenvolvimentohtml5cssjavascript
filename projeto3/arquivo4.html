@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário Vertical com CSS Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef1f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #444;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .buttons input {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .buttons .submit {
+      background-color: #28a745;
+    }
+
+    .buttons .reset {
+      background-color: #dc3545;
+    }
+
+    .buttons .submit:hover {
+      background-color: #218838;
+    }
+
+    .buttons .reset:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Cadastro Simples</h2>
+
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+    </div>
+
+    <div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" />
+    </div>
+
+    <div>
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero">
+        <option value="">Selecione</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+    </div>
+
+    <div class="buttons">
+      <input type="submit" class="submit" value="Enviar" />
+      <input type="reset" class="reset" value="Limpar" />
+    </div>
+  </form>
+</body>
+</html>
