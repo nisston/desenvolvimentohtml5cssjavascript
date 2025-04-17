@@ -1,0 +1,25 @@
+
+h1, h2, p {
+  color: blue;
+}
+
+/* Descendente */
+.pai p {
+  color: greenyellow;
+}
+
+/* Filho direto */
+.pai > p {
+  color: red;
+}
+
+
+/* Irmão adjacente */
+span + p {
+  color: rgb(245, 241, 19);
+}
+
+/* Irmão geral */
+span ~ p {
+  color: rgb(245, 19, 132);
+}

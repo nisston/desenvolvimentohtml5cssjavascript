@@ -1,0 +1,33 @@
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+  justify-content: center;     /* Centraliza horizontalmente */
+  align-items: center;         /* Centraliza verticalmente */
+}
+
+.flex-container > div {
+  background-color: #ccc;
+  padding: 20px;
+  margin: 25px;
+  width: 200px;              /* Largura das caixas */
+  text-align: center;        /* Centralizando os textos*/
+  border: 1px solid #666;  /* borda fina */
+  border-radius: 10px;       /* cantos arredondados */  
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-container > div {
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;        /* Centralizando os textos*/
+}

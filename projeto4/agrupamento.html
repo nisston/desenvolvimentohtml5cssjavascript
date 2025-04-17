@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agrupamento de Seletores</title>
+  <link rel="stylesheet" href="agrupamento.css">
+</head>
+<body>
+  <h1>Título Principal</h1>
+  <h2>Subtítulo</h2>
+  <p>Parágrafo comum</p>
+
+  <div class="pai">
+    <p>Filho Direto</p>          <!-- Será afetado pelo seletor filho direto -->
+
+    <span>Texto qualquer</span> 
+    <p>Parágrafo 2</p>          <!-- Será afetado pelo irmão adjacente -->
+
+    <section>
+      <p>Descendente</p>         <!-- Só será afetado pelo seletor descendente -->
+    </section>
+
+    <p>Parágrafo 2</p>          <!-- Será afetado pelo irmão geral -->
+  </div>
+  
+  <p>Parágrafo fora do .pai</p> <!-- D -->
+
+</body>
+</html>

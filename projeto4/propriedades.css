@@ -1,0 +1,20 @@
+
+.box {
+  display: flex;                     /* Ativa o Flexbox */
+  justify-content: center;           /* Centraliza o conteúdo horizontalmente */
+  align-items: center;               /* Centraliza o conteúdo verticalmente */
+
+  color: white;                     /* Cor do texto dentro do elemento */
+  font-size: 20px;                    /* Tamanho da fonte do texto */
+  font-family: Arial, sans-serif;     /* Fonte utilizada; Arial como principal, sans-serif como alternativa */
+  text-align: center;                 /* Alinhamento do texto ao centro horizontalmente */
+  margin: 20px;                       /* Espaçamento externo (fora da caixa) em todos os lados */
+  padding: 20px;                      /* Espaçamento interno (dentro da caixa) em todos os lados */
+  border: 2px solid black;          /* Borda com 2px de espessura, linha sólida e cor preta */
+  width: 300px;                       /* Largura fixa da caixa */
+  height: 100px;                      /* Altura fixa da caixa */
+  box-sizing: border-box;             /* Faz com que a largura e altura incluam padding e borda */
+  background-color: #3498db;        /* Cor de fundo da caixa (azul) */
+  border-radius: 10px;                /* Deixa os cantos da caixa arredondados com raio de 10px */
+  box-shadow: 2px 2px 10px gray;    /* Sombra projetada atrás da caixa: 2px à direita, 2px abaixo e 10px de desfoque, cor cinza */
+}

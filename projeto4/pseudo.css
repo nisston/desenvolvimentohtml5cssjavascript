@@ -1,0 +1,36 @@
+
+button:hover {
+  background-color: blue;
+  color: white;
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+p::before {
+  content: ">>";
+  color: red;
+}
+
+
+/*
+Pseudo-classe	O que faz
+:hover	          Aplica estilo quando o mouse está sobre o elemento
+:active	          Quando o elemento está sendo ativado (clicado)
+:focus	          Quando o elemento (como um input) recebe foco
+:nth-child(n)	    Seleciona o n-ésimo filho
+:first-child	    Seleciona o primeiro filho
+:last-child	      Seleciona o último filho
+:checked	        Aplica estilo quando um checkbox ou radio está marcado
+*/
+
+/*
+
+::before	        Insere conteúdo antes do conteúdo do elemento
+::after	          Insere conteúdo depois do conteúdo do elemento
+::first-line	    Estiliza apenas a primeira linha do texto
+::first-letter	  Estiliza apenas a primeira letra
+::placeholder	    Estiliza o texto de placeholder em inputs
+::selection	      Estiliza o texto quando está selecionado (Ctrl+C)
+*/
