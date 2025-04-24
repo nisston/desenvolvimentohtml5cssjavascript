@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Introdução ao JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <h2>1. Console e Alert</h2>
+    <script>
+      console.log("Olá, mundo!");
+      alert("Bem-vindo ao curso de JS!");
+    </script>
+  </section>
+
+  <section>
+    <h2>2. Variáveis e Tipos de Dados</h2>
+    <script>
+      const nome = "João";
+      let idade = 30;
+      document.write("Nome: " + nome + ", Idade: " + idade);
+    </script>
+  </section>
+
+  <section>
+    <h2>3. Condicional</h2>
+    <script>
+      const idade2 = 17;
+      if (idade2 >= 18) {
+        document.write("<p>Maior de idade</p>");
+      } else {
+        document.write("<p>Menor de idade</p>");
+      }
+    </script>
+  </section>
+
+  <section>
+    <h2>4. Manipulação do DOM</h2>
+    <p id="mensagem">Texto original</p>
+    <button onclick="document.getElementById('mensagem').textContent='Texto alterado!'">Alterar</button>
+  </section>
+
+  <section>
+    <h2>5. Eventos e Formulário</h2>
+    <input type="text" id="nomeInput" placeholder="Digite seu nome">
+    <button onclick="mostrarNome()">Mostrar</button>
+    <p id="saida"></p>
+    <script>
+      function mostrarNome() {
+        const nome = document.getElementById("nomeInput").value;
+        document.getElementById("saida").textContent = "Olá, " + nome;
+      }
+    </script>
+  </section>
+
+  <section>
+    <h2>6. Função com Parâmetro</h2>
+    <script>
+      function saudacao(nome) {
+        document.write("<p>Bem-vindo, " + nome + "!</p>");
+      }
+      saudacao("Lucas");
+    </script>
+  </section>
+
+  <section>
+    <h2>7. Array</h2>
+    <script>
+      const frutas = ["Maçã", "Banana", "Laranja"];
+      frutas.forEach(function(fruta) {
+        document.write("<p>Fruta: " + fruta + "</p>");
+      });
+    </script>
+  </section>
+
+  <section>
+    <h2>8. Prompt</h2>
+    <script>
+      const nomePrompt = prompt("Qual seu nome?");
+      document.write("<p>Olá, " + nomePrompt + "!</p>");
+    </script>
+  </section>
+
+  <section>
+    <h2>9. Validação de Formulário</h2>
+    <form onsubmit="return validarForm()">
+      <input type="text" id="email" placeholder="Digite o e-mail">
+      <button type="submit">Enviar</button>
+    </form>
+    <script>
+      function validarForm() {
+        const email = document.getElementById("email").value;
+        if (email === "") {
+          alert("Por favor, preencha o campo de e-mail.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </section>
+
+</body>
+</html>
