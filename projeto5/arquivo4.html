@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Introdução ao JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <h2>Condicional com input</h2>
+  
+    <label for="idade">Digite sua idade:</label>
+    <input type="number" id="idade">
+    <button onclick="verificarIdade()">Verificar</button>
+  
+    <p id="resultado"></p>
+  
+    <script>
+      function verificarIdade() {
+        const idade = parseInt(document.getElementById("idade").value);
+  
+        if (isNaN(idade)) {
+          document.getElementById("resultado").textContent = "Por favor, insira uma idade válida.";
+        } else if (idade >= 18) {
+          document.getElementById("resultado").textContent = "Maior de idade";
+        } else {
+          document.getElementById("resultado").textContent = "Menor de idade";
+        }
+      }
+    </script>
+  </section>
+  
+
+</body>
+</html>
