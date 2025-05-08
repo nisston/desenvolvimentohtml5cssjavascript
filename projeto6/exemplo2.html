@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com o Nome da Tag</title>
+</head>
+<body>
+
+    <p id="mensagem">Olá!</p>
+    <button onclick="mudarMensagem()">Clique</button>
+
+    <script>
+        function mudarMensagem() {
+            // getElementsByTagName
+            const p = document.getElementsByTagName("p");
+            p[0].textContent = "Mensagem alterada!";
+        }
+    </script>
+
+</body>
+</html>

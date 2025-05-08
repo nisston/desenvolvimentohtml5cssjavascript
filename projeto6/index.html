@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="titulo">Manipulando o DOM</h1>
+  <p class="destaque">Parágrafo com classe "destaque"</p>
+  <p class="destaque">Outro parágrafo com classe "destaque"</p>
+  <p>Parágrafo comum</p>
+
+  <input type="text" name="usuario" value="Maria">
+  <input type="text" name="usuario" value="João">
+
+  <button onclick="mostrarElementos()">Mostrar Elementos</button>
+
+  <script>
+    function mostrarElementos() {
+      // getElementById
+      const titulo = document.getElementById("titulo");
+      titulo.style.color = "red";
+      console.log("ID:", titulo.textContent);
+
+      // getElementsByTagName
+      const paragrafos = document.getElementsByTagName("p");
+      console.log("Tag <p>:", paragrafos.length, "parágrafos");
+      for (let p of paragrafos) {
+        console.log("Texto do <p>:", p.textContent);
+      }
+
+      // getElementsByClassName
+      const destaques = document.getElementsByClassName("destaque");
+      console.log("Classe 'destaque':", destaques.length);
+      for (let d of destaques) {
+        d.style.backgroundColor = "yellow";
+      }
+
+      // getElementsByName
+      const usuarios = document.getElementsByName("usuario");
+      console.log("Inputs com name='usuario':");
+      usuarios.forEach(input => {
+        console.log("Valor:", input.value);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <p class="item">Item 3</p>
+    <button onclick="alterarItens()">Alterar Itens</button>
+
+    <script>
+    function alterarItens() {
+        const itens = document.getElementsByClassName("item");
+
+        for (let i = 0; i < itens.length; i++) {
+        itens[i].textContent = `Item alterado ${i + 1}`;
+        itens[i].style.color = "blue";
+        itens[i].style.fontWeight = "bold";
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuada com DOM</title>
+</head>
+<body>
+
+  <h2>Gerador de Tabuada</h2>
+
+  <label for="numero">Informe um número inteiro:</label>
+  <input type="number" id="numero" />
+  <button onclick="gerarTabuada()">Mostrar Tabuada</button>
+
+  <div id="resultado" style="margin-top: 20px;"></div>
+
+  <script>
+    function gerarTabuada() {
+      const input = document.getElementById("numero"); // usa getElementById
+      const valor = parseInt(input.value);
+      const resultado = document.getElementById("resultado");
+
+      let tabuada = "<h3>Tabuada do " + valor + ":</h3><ul>";
+      for (let i = 1; i <= 10; i++) {
+        tabuada += `<li>${valor} x ${i} = ${valor * i}</li>`;
+      }
+      tabuada += "</ul>";
+
+      resultado.innerHTML = tabuada;
+    }
+  </script>
+
+</body>
+</html>

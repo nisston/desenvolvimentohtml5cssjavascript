@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="mensagem">Primeira mensagem</p>
+
+    <button onclick="alterarMensagens()">Alterar Mensagens</button>
+
+    <script>
+    function alterarMensagens() {
+        // Seleciona todos os elementos com a classe "mensagem"
+        const p = document.getElementsByClassName("mensagem");
+        p[0].textContent = "Mensagem alterada!";
+        }
+    </script>
+
+</body>
+</html>
