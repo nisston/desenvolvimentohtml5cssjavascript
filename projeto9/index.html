@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>API Clientes</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <h1>Clientes</h1>
+
+  <div>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="email" id="email" placeholder="Email">
+    <button onclick="adicionarCliente()">Salvar</button>
+  </div>
+
+  <ul id="listaClientes"></ul>
+
+<script>
+    async function carregarClientes() {
+        const resposta = await fetch('api/listar_clientes.php');
+        const clientes = await resposta.json();
+        const lista = document.getElementById('listaClientes');
+        lista.innerHTML = '';
+
+        clientes.forEach(cliente => {
+        const item = document.createElement('li');
+        item.innerHTML = `${cliente.ID} - ${cliente.Nome} - ${cliente.Email}
+                            <button onclick="excluirCliente(${cliente.ID})">Apagar</button>`;
+        lista.appendChild(item);
+        });
+    }
+
+    async function adicionarCliente() {
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+
+        const resposta = await fetch('api/adicionar_cliente.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ Nome: nome, Email: email })
+        });
+
+        const resultado = await resposta.json();
+        alert(resultado.mensagem || resultado.erro);
+        carregarClientes();
+    }
+
+    async function excluirCliente(id) {
+        const resposta = await fetch('api/excluir_cliente.php', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ID: id })
+        });
+
+        const resultado = await resposta.json();
+        alert(resultado.mensagem || resultado.erro);
+        carregarClientes();
+    }
+
+  // Carrega os clientes ao abrir a página
+  carregarClientes();
+</script>
+
+</body>
+</html>
