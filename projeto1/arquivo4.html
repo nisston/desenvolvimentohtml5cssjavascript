@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Tabelas em HTML5</title>
+</head>
+<body>
+    <h2>Tabela Simples</h2>
+
+    <table border="1">
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>Cidade</td>
+            <td>UF</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>São Paulo</td>
+            <td>SP</td>
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Rio de Janeiro</td>
+            <td>RJ</td>
+        </tr>
+    </table>
+<br>
+
+    <table border="1">
+        <tr>
+            <td colspan="2">Nome</td>
+            <td>Cidade</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>São Paulo</td>
+
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td colspan="2">30</td>
+        </tr>
+    </table>
+
+    <h2>Tabela com Células Mescladas</h2>
+    <table border="1">
+        <tr>
+            <th colspan="2">Nome e Idade</th>
+            <th>Cidade</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>São Paulo</td>
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Rio de Janeiro</td>
+        </tr>
+    </table>
+
+    <h2>Tabela com Linhas Mescladas</h2>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th rowspan="2">Idade</th>
+            <th>Cidade</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>São Paulo</td>
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Rio de Janeiro</td>
+        </tr>
+    </table>
+
+    <h2>Tabela com Borda Simples e Borda Dupla</h2>
+    <table border="3">
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Notebook</td>
+            <td>R$ 3500</td>
+        </tr>
+        <tr>
+            <td>Smartphone</td>
+            <td>R$ 2500</td>
+        </tr>
+    </table>
+
+    <h2>Tabela com Borda Colorida</h2>
+    <table border="2" style="border-color: blue;">
+        <tr>
+            <th>Curso</th>
+            <th>Duração</th>
+        </tr>
+        <tr>
+            <td>Engenharia</td>
+            <td>5 anos</td>
+        </tr>
+        <tr>
+            <td>Medicina</td>
+            <td>6 anos</td>
+        </tr>
+    </table>
+
+    <h2>Exemplo de Tabela</h2>
+    <table border="1">
+         <!-- Define um grupo de colunas -->
+         <colgroup>
+            <col style="background-color: lightgray;"> <!-- Primeira coluna com cor de fundo -->
+            <col>
+            <col style="background-color: rgb(43, 177, 226);">
+            <col>
+        </colgroup>     
+        <!-- Cabeçalho da tabela -->
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+        
+        <!-- Corpo da tabela -->
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+                <td>São Paulo</td>
+            </tr>
+            <tr>
+                <td>Bruno</td>
+                <td>30</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+        </tbody>
+        
+        <!-- Rodapé da tabela -->
+        <tfoot>
+            <tr>
+                <td colspan="3">Total de registros: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+</html>
