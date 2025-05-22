@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Simples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Calculadora</h1>
+
+  <input type="number" id="valor1" placeholder="Valor 1">
+  <input type="number" id="valor2" placeholder="Valor 2">
+
+  <div class="botoes">
+    <button onclick="soma()">+</button>
+    <button onclick="subtracao()">-</button>
+    <button onclick="multiplicacao()">*</button>
+    <button onclick="divisao()">/</button>
+  </div>
+
+  <h2>Resultado: <span id="resultado">0</span></h2>
+
+  <script src="script.js"></script>
+</body>
+</html>
