@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.acao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* espaço entre os ícones */
+}
+
+.acao a i {
+    font-size: 18px;
+    color: #007BFF;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.acao a i:hover {
+    color: #0056b3;
+}
+.btn-novo {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.btn-novo i {
+    margin-right: 5px;
+}
+a i {
+    font-size: 18px;
+    color: #007BFF;
+    margin: 0 5px;
+}
+a i:hover {
+    color: #0056b3;
+        }
+
+h1 {
+    margin-top: 30px;
+}
+form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.voltar {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+}
+.voltar:hover {
+    text-decoration: underline;
+}
